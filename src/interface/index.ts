@@ -4,3 +4,9 @@ export interface Product {
   price: number, // 价格
   count: number // 购买数量
 }
+
+export interface News {
+  id: number,
+  title: string,
+  link?: string,
+}

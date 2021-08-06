@@ -32,4 +32,9 @@ Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
 ### 待处理：
 - 文件不写index
 - defineAsyncComponent作用
+
+### 自己出题
+- 用用枚举
+- 用用mock
+- 可以的话，自己用node搭建个服务
  

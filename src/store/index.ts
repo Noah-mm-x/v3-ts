@@ -14,6 +14,9 @@ export const store = createStore<State>({
     shoppingCart: []
   },
   getters: {
+    shoppingCartLen(state) {
+      return state.shoppingCart.length
+    },
     // 是否在购物车中已存在
     isInCart(state) {
       return (data: any) => {

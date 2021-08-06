@@ -1,12 +1,17 @@
 // index.ts 
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 // import { defineAsyncComponent } from 'vue'
-import Home from "/@pages/Products/index.vue";
+import Index from "/@pages/Index/index.vue";
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
+    name: 'index',
+    component: Index,
+  },
+  {
+    path: '/product',
     name: 'product',
-    component: Home,
+    component: () => import('/@pages/Products/index.vue'),
   },
   {
     path: '/shoppingCart',
