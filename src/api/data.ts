@@ -1,30 +1,96 @@
 import { Product, News } from "../interface";
 
+import img1 from '/img/products/img1.jpg'
+import img2 from '/img/products/img2.jpg'
+import img3 from '/img/products/img3.jpg'
+import img4 from '/img/products/img4.jpg'
+import img5 from '/img/products/img5.jpg'
+import img6 from '/img/products/img6.jpg'
+import img7 from '/img/products/img7.jpg'
+import img8 from '/img/products/img8.jpg'
+import img9 from '/img/products/img9.jpg'
+import img10 from '/img/products/img10.jpg'
+import img11 from '/img/products/img11.jpg'
+
+
 const productData: Product[] = [
   {
     id: 1,
+    img: img1,
     title: 'aaa',
     price: 20,
     count: 10
   },
   {
     id: 2,
+    img: img2,
     title: 'bbb',
-    price: 10,
+    price: 12,
     count: 40
   },
   {
     id: 3,
+    img: img3,
     title: 'ccc',
-    price: 20,
+    price: 2,
     count: 4
   },
   {
     id: 4,
+    img: img4,
     title: 'ddd',
-    price: 20,
+    price: 2,
     count: 30
-  }
+  },
+  {
+    id: 5,
+    img: img5,
+    title: 'ddd',
+    price: 43,
+    count: 3
+  },
+  {
+    id: 6,
+    img: img6,
+    title: 'ddd',
+    price: 120,
+    count: 300
+  },
+  {
+    id: 7,
+    img: img7,
+    title: 'ddd',
+    price: 89,
+    count: 30
+  },
+  {
+    id: 8,
+    img: img8,
+    title: 'ddd',
+    price: 72,
+    count: 3
+  },
+  {
+    id: 9,
+    img: img9,
+    title: 'ddd',
+    price: 53,
+    count: 390
+  },
+  {
+    id: 10,
+    img: img10,
+    title: 'ddd',
+    price: 28,
+    count: 320
+  },
+  {
+    id: 11,
+    img: img11,
+    title: 'ddd',
+    price: 21,
+    count: 130
+  },
 ]
 const newsData: News[] = [
   {

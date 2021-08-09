@@ -53,7 +53,7 @@ export default defineComponent({
     // let num: number = ref(0)
     // let num = ref<number>(0)
     // let num = ref(0) as number
-    let loading = ref(true)
+    let loading = ref<Boolean>(true)
     let newsList = ref<[]>([]);
     onMounted(async () => {
       const data = await apiGetNews();

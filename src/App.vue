@@ -2,9 +2,22 @@
   <div id="app">
     <nav-bar></nav-bar>
     <router-view />
-    <van-tabbar route>
-      <van-tabbar-item replace to="/" icon="home-o">首页</van-tabbar-item>
-      <van-tabbar-item replace to="/products" icon="shop">商品</van-tabbar-item>
+    <div class="place"></div>
+    <van-tabbar
+      route
+      :safe-area-inset-bottom="true"
+      active-color="#FF8000"
+    >
+      <van-tabbar-item
+        replace
+        to="/"
+        icon="home-o"
+      >首页</van-tabbar-item>
+      <van-tabbar-item
+        replace
+        to="/products"
+        icon="shop"
+      >商品</van-tabbar-item>
     </van-tabbar>
   </div>
 </template>
@@ -23,7 +36,12 @@ export default defineComponent({
 });
 </script>
 
-<style>
+<style lang="less" scoped>
 #app {
+  min-height: 100%;
+  .place {
+    height: var(--van-tabbar-height);
+  }
 }
 </style>
+

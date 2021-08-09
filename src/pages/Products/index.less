@@ -1,0 +1,50 @@
+.list{
+  padding: 0 15px;
+  li{
+    a{
+      display: flex;
+      justify-content: start;
+      padding: 10px 0px;
+      border-bottom: 1px solid #666;
+      .img{
+        width: 120px;
+        height: 120px;
+        border-radius: 4px;
+        border: 1px solid #eee;
+      }
+      .info-wrap{
+        position: relative;
+        padding-left: 10px;
+        width: 100%;
+        .title{
+          font-size: 24px;
+          color: #333;
+        }
+        .desc{
+          margin-top: 4px;
+          font-size: 14px;
+          color: #666;
+        }
+        .price{
+          font-size: 12px;
+          span{
+            color: #FF8000;
+          }
+        }
+        .num{
+          position: absolute;
+          left: 10px;
+          bottom: 0px;
+          span{
+            color: #FF8000;
+          }
+        }
+        .icon{
+          position: absolute;
+          right: 4px;
+          bottom: 4px;
+        }
+      }
+    }
+  }
+}
