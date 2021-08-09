@@ -2,16 +2,23 @@
   <div id="app">
     <nav-bar></nav-bar>
     <router-view />
+    <van-tabbar route>
+      <van-tabbar-item replace to="/" icon="home-o">首页</van-tabbar-item>
+      <van-tabbar-item replace to="/products" icon="shop">商品</van-tabbar-item>
+    </van-tabbar>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import NavBar from "/@src/components/NavBar/index.vue";
+import { Tabbar, TabbarItem } from "vant";
 export default defineComponent({
   name: "App",
   components: {
-    NavBar
+    NavBar,
+    [Tabbar.name]: Tabbar,
+    [TabbarItem.name]: TabbarItem,
   },
 });
 </script>
