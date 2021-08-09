@@ -1,6 +1,6 @@
 <template>
   <div id="products">
-    
+    dd
   </div>
 </template>
 <script lang="ts">
@@ -9,7 +9,9 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "Products",
   // mixins: [mixin],
-  setup: () => {},
+  setup: () => {
+    console.log(11)
+  },
 });
 </script>
 <style lang="less" scoped>

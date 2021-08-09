@@ -1,16 +1,30 @@
-.navbar{
-  display: flex;
-  justify-content: space-between;
-  width: 375px;
-  height: 40px;
-  font-size: 14px;
-  background: #abcdef;
-  line-height: 40px;
-  padding: 0 30px;
-  .txt{
-    color: #333;
+.navbar {
+  .place {
+    width: 375px;
+    height: 40px;
   }
-  .num{
-    color: #ff0000;
+
+  .con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 375px;
+    height: 40px;
+    font-size: 14px;
+    background: #abcdef;
+    line-height: 40px;
+    padding: 0 30px;
+    z-index: 10;
+
+    .txt {
+      color: #333;
+    }
+
+    .num {
+      color: #ff0000;
+    }
   }
+
 }

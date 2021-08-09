@@ -9,8 +9,8 @@ const routes: Array<RouteRecordRaw> = [
     component: Index,
   },
   {
-    path: '/product',
-    name: 'product',
+    path: '/products',
+    name: 'products',
     component: () => import('/@pages/Products/index.vue'),
   },
   {
