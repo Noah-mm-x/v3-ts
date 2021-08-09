@@ -43,7 +43,7 @@ export default defineComponent({
   },
   setup: () => {
     const { commit } = useStore();
-    const list = ref<[]>([]);
+    const list = ref<Array<Product>>([]);
     onMounted(async () => {
       const data = await apiGetProducts();
       console.log(data);
