@@ -26,21 +26,8 @@ export const store = createStore<State>({
   },
   mutations: {
     // 添加购物车
-    ADD_TO_CARD(state, data) {
+    addToCart(state, data) {
       state.shoppingCart.push(data);
-    },
-    // 更新购物车数量
-    CHANGE_COUNT(state, { type, data }) {
-      return state.shoppingCart.map(item => {
-        if (data.id === item.id) {
-          item.count += type === 'add' ? 1 : -1;
-        }
-        return item;
-      })
-    },
-    // 删除购物车
-    REMOVE_BY_ID(state, id) {
-      state.shoppingCart = state.shoppingCart.filter(item => item.id !== id);
     }
   }
 })
