@@ -1,12 +1,13 @@
 <template>
   <div class="navbar">
-    <p class="txt">首页</p>
+    <a class="txt" href="javascript:;" @click="backIndex">首页</a>
     <p class="num">{{num}}</p>
   </div>
 </template>
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
 import { useStore } from "/@store/";
+import { useRouter } from 'vue-router'
 export default defineComponent({
   name: "",
   setup: () => {
@@ -14,10 +15,16 @@ export default defineComponent({
     const store = useStore();
     const { getters } = store;
     let num = computed((): number => getters.shoppingCartLen);
+    const router = useRouter()
+    const backIndex = ()=>{
+      router.push('/')
+    }
     return {
       num,
+      backIndex
     };
   },
+
 });
 </script>
 <style lang="less" scoped>

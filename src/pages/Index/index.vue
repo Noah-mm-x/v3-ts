@@ -16,7 +16,8 @@
         >
       </van-swipe-item>
     </van-swipe>
-    <div class="content">
+    <van-loading class="loading" v-if="loading" type="spinner" color="#abcdef" vertical>加载中...</van-loading>
+    <div v-else class="content">
       <ul class="list">
         <li
           v-for="(item,index) in newsList"
@@ -30,11 +31,11 @@
 </template>
 <script lang="ts">
 import { defineComponent, onMounted, reactive, ref } from "vue";
-import banner1 from "/@img/banner1.jpeg";
-import banner2 from "/@img/banner2.jpeg";
-import banner3 from "/@img/banner3.jpeg";
-import banner4 from "/@img/banner4.jpeg";
-import { Swipe, SwipeItem } from "vant";
+import banner1 from "/@img/banner/banner1.jpeg";
+import banner2 from "/@img/banner/banner2.jpeg";
+import banner3 from "/@img/banner/banner3.jpeg";
+import banner4 from "/@img/banner/banner4.jpeg";
+import { Swipe, SwipeItem, Loading } from "vant";
 import { apiGetNews } from "/@api/";
 interface Banner {
   url: string;
@@ -46,15 +47,18 @@ export default defineComponent({
   components: {
     [Swipe.name]: Swipe,
     [SwipeItem.name]: SwipeItem,
+    [Loading.name]: Loading
   },
   setup: () => {
     // let num: number = ref(0)
     // let num = ref<number>(0)
     // let num = ref(0) as number
+    let loading = ref(true)
     let newsList = ref<[]>([]);
     onMounted(async () => {
       const data = await apiGetNews();
       newsList.value = data;
+      loading.value = false
       console.log(data);
     });
     const bannerList: Array<Banner> = reactive([
@@ -76,6 +80,7 @@ export default defineComponent({
       },
     ]);
     return {
+      loading,
       bannerList,
       newsList,
     };
