@@ -26,10 +26,12 @@
         </a>
       </li>
     </ul>
+    <cart></cart>
   </div>
 </template>
 <script lang="ts">
 import { defineComponent, onMounted, ref } from "vue";
+import Cart from "/@src/components/Cart/index.vue";
 import { Icon } from "vant";
 // import mixin from "/@src/utility/mixin.ts";
 import { apiGetProducts } from "/@api/";
@@ -39,6 +41,7 @@ export default defineComponent({
   name: "Products",
   // mixins: [mixin],
   components: {
+    Cart,
     [Icon.name]: Icon,
   },
   setup: () => {

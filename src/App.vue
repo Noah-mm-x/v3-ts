@@ -13,7 +13,6 @@
         v-if="!$route.meta.keepAlive"
       />
     </router-view>
-    <cart></cart>
     <!-- <router-view />-->
     <div class="place"></div>
     <van-tabbar
@@ -38,13 +37,11 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import NavBar from "/@src/components/NavBar/index.vue";
-import Cart from "/@src/components/Cart/index.vue";
 import { Tabbar, TabbarItem } from "vant";
 export default defineComponent({
   name: "App",
   components: {
     NavBar,
-    Cart,
     [Tabbar.name]: Tabbar,
     [TabbarItem.name]: TabbarItem,
   },
