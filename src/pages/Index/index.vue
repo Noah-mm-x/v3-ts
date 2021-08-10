@@ -89,6 +89,7 @@ export default defineComponent({
         link: "baidu.com",
       },
     ]);
+   
     return {
       loading,
       bannerList,
