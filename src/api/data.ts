@@ -1,4 +1,4 @@
-import { Product, News } from "../interface";
+import { Product, News, Todo } from "../interface";
 
 import img1 from '/img/products/img1.jpg'
 import img2 from '/img/products/img2.jpg'
@@ -13,7 +13,7 @@ import img10 from '/img/products/img10.jpg'
 import img11 from '/img/products/img11.jpg'
 
 
-const productData: Product[] = [
+const productsData: Product[] = [
   {
     id: 1,
     img: img1,
@@ -134,7 +134,58 @@ const newsData: News[] = [
     title: '孙颖莎想成为真正的大魔王'
   }
 ]
+const todosData: Todo[] = [
+  {
+    txt: '早起',
+    finish: false
+  },
+  {
+    txt: '吃早饭',
+    finish: true
+  },
+  {
+    txt: '记账',
+    finish: true
+  },
+  {
+    txt: '吃午饭',
+    finish: false
+  },
+  {
+    txt: '敲代码',
+    finish: false
+  },
+  {
+    txt: '修图',
+    finish: false
+  },
+  {
+    txt: '拍照',
+    finish: false
+  },
+  {
+    txt: '聊天',
+    finish: true
+  },
+  {
+    txt: '笑一下',
+    finish: false
+  },
+  {
+    txt: '喝口水',
+    finish: false
+  },
+  {
+    txt: '去厕所',
+    finish: true
+  },
+  {
+    txt: '写需求',
+    finish: true
+  }
+]
 export {
-  productData,
-  newsData
+  productsData,
+  newsData, 
+  todosData
 }

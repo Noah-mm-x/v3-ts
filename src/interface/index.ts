@@ -11,3 +11,8 @@ export interface News {
   title: string,
   link?: string,
 }
+
+export interface Todo {
+  txt: string,
+  finish: boolean
+}
