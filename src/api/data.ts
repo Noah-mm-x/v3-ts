@@ -159,14 +159,14 @@ const todosData: Todo[] = [
     txt: '修图',
     finish: false
   },
-  {
-    txt: '拍照',
-    finish: false
-  },
-  {
-    txt: '聊天',
-    finish: true
-  },
+  // {
+  //   txt: '拍照',
+  //   finish: false
+  // },
+  // {
+  //   txt: '聊天',
+  //   finish: true
+  // },
   {
     txt: '笑一下',
     finish: false
@@ -174,10 +174,6 @@ const todosData: Todo[] = [
   {
     txt: '喝口水',
     finish: false
-  },
-  {
-    txt: '去厕所',
-    finish: true
   },
   {
     txt: '写需求',

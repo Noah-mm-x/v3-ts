@@ -6,6 +6,7 @@ import router from './router';
 import 'vant/lib/index.css';
 import 'lib-flexible'
 import '/@src/assets/css/reset.less'
+import '/@src/assets/css/vantChange.less'
 
 const app = createApp(App);
 app.use(router);
