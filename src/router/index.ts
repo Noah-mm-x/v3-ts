@@ -17,23 +17,23 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('/@pages/Products/index.vue'),
   },
   {
-    path: '/shoppingCart',
-    name: 'shoppingCart',
-    component: () => import('/@pages/ShoppingCart/index.vue'),
+    path: '/details',
+    name: 'details',
+    component: () => import('/@pages/Details/index.vue'),
   },
   {
     path: '/test',
-    name: 'Test',
+    name: 'test',
     component: () => import('/@pages/Test/index.vue'),
   },
   {
     path: '/user',
-    name: 'User',
+    name: 'user',
     component: () => import('/@pages/User/index.vue'),
   },
   {
     path: '/todo',
-    name: 'Todo',
+    name: 'todo',
     component: () => import('/@pages/Todo/index.vue'),
   },
   // {

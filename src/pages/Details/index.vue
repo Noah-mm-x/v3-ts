@@ -1,6 +1,6 @@
 <template>
-  <div>
-
+  <div id="details">
+    details
   </div>
 </template>
 <script lang="ts">
