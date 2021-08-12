@@ -16,6 +16,9 @@ export default defineComponent({
     TodoItem,
     TodoFooter
   },
+  provide: {
+    intro: '我就是个说明😝'
+  },
   setup: () => {
     const list = ref<Array<Todo>>([]);
     onMounted(async () => {
