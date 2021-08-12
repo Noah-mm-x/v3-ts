@@ -31,6 +31,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'User',
     component: () => import('/@pages/User/index.vue'),
   },
+  {
+    path: '/todo',
+    name: 'Todo',
+    component: () => import('/@pages/Todo/index.vue'),
+  },
   // {
   //   path: '/shoppingCart',
   //   name: 'shoppingCart',
