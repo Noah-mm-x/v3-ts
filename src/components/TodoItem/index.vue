@@ -2,7 +2,7 @@
   <div class="todo-item">
     <a
       href="javascript:;"
-      @click="handleDelete(id)"
+      @click="handleDelete"
     >
       <van-icon
         size="24"
@@ -39,8 +39,8 @@ export default defineComponent({
   components: {
     [Icon.name]: Icon,
   },
-  setup: (prop, { emit }) => {
-    const handleDelete = (id: number) => {
+  setup: ({ id }, { emit }) => {
+    const handleDelete = () => {
       emit("handleDelete", id);
     };
     return {
