@@ -13,6 +13,7 @@ export interface News {
 }
 
 export interface Todo {
+  id: number,
   txt: string,
   finish: boolean
 }

@@ -25,6 +25,7 @@ export default defineComponent({
     const handleConfirm = () => {
       Toast(intro);
       console.log(intro);
+      // console.log(intro)
     };
     return {
       handleConfirm,

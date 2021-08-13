@@ -136,52 +136,63 @@ const newsData: News[] = [
 ]
 const todosData: Todo[] = [
   {
+    id: 1,
     txt: '早起',
     finish: false
   },
   {
+    id: 2,
     txt: '吃早饭',
     finish: true
   },
   {
+    id: 3,
     txt: '记账',
     finish: true
   },
   {
+    id: 4,
     txt: '吃午饭',
     finish: false
   },
   {
+    id: 5,
     txt: '敲代码',
     finish: false
   },
   {
+    id: 6,
     txt: '修图',
     finish: false
   },
   // {
+  // id:7,
   //   txt: '拍照',
   //   finish: false
   // },
   // {
+  // id:8,
   //   txt: '聊天',
   //   finish: true
   // },
   {
+    id: 9,
     txt: '笑一下',
     finish: false
   },
   {
+    id: 10,
     txt: '喝口水',
     finish: false
   },
   {
+    id: 11,
     txt: '写需求',
     finish: true
   }
 ]
 export {
   productsData,
-  newsData, 
+  newsData,
   todosData
 }

@@ -1,5 +1,14 @@
 <template>
   <div class="todo-item">
+    <a
+      href="javascript:;"
+      @click="handleDelete(id)"
+    >
+      <van-icon
+        size="24"
+        name="cross"
+      ></van-icon>
+    </a>
     <p class="txt">
       <slot></slot>
     </p>
@@ -19,6 +28,9 @@ export default defineComponent({
     // txt: {
     //   type: String
     // },
+    id: {
+      type: Number,
+    },
     finish: {
       type: Boolean,
       default: false,
@@ -27,7 +39,14 @@ export default defineComponent({
   components: {
     [Icon.name]: Icon,
   },
-  setup: () => {},
+  setup: (prop, { emit }) => {
+    const handleDelete = (id: number) => {
+      emit("handleDelete", id);
+    };
+    return {
+      handleDelete,
+    };
+  },
 });
 </script>
 <style lang="less" scoped>
