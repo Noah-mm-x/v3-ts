@@ -15,12 +15,12 @@ export default defineComponent({
       w,
     }
     let dir: Direction = Direction.e;
-    console.log(Direction, dir);
+    // console.log(Direction, dir);
     let tup: [string, boolean];
     tup = ["d", false];
-    console.log(tup);
+    // console.log(tup);
     function haha(): void {
-      console.log("haha");
+      // console.log("haha");
     }
     haha();
     function msgFnc(msg: string | undefined | null) {
@@ -45,7 +45,7 @@ export default defineComponent({
     }
     const tz = new Teacher("张三", 23, "老师");
     const tzJob = tz.getJob();
-    console.log(tzJob, tz.age);
+    // console.log(tzJob, tz.age);
 
     type XDefine = { x: number };
     type Point = XDefine & { y: number };
@@ -53,7 +53,24 @@ export default defineComponent({
       x: 1,
       y: 1,
     };
-    console.log(p1);
+    // console.log(p1);
+
+    function identity<T, U>(value: T, msg: U): T {
+      // console.log(msg)
+      return value;
+    }
+    // console.log(identity<number,string>(12,'sss'))
+
+    const per1: Person = { name: "战神", age: 109 };
+    type sp = typeof per1;
+    const sp1: sp = { name: "刑天", age: 990 };
+    // console.log(sp1);
+
+    const personSay = (per: Person, msg: Partial<Person>): void => {
+      console.log(`${per.name} say ${msg.name}`);
+    };
+    personSay({ name: "战神", age: 109 }, { name: "hh" });
+    
   },
 });
 </script>
