@@ -13,7 +13,6 @@
         内容 {{ index }}
       </van-tab>
     </van-tabs>
-    test
   </div>
 </template>
 <script lang="ts">

@@ -21,6 +21,9 @@
           <router-link tag="a" to="/test">Test</router-link>
         </li>
         <li>
+          <router-link tag="a" to="/testHtml">testHtml</router-link>
+        </li>
+        <li>
           <router-link tag="a" to="/todo">Todo</router-link>
         </li>
       </ul>

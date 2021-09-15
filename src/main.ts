@@ -7,11 +7,14 @@ import 'vant/lib/index.css';
 import 'lib-flexible'
 import '/@src/assets/css/reset.less'
 import '/@src/assets/css/vantChange.less'
+import marked from 'marked';
 
 const app = createApp(App);
 app.use(router);
 app.use(store,key);
 app.mount('#app')
+
+app.config.globalProperties.$md = marked
 
 // 添加全局方法
 // app.config.globalProperties.$toast = (msg)=>{

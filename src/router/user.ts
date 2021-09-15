@@ -5,6 +5,11 @@ const userRoute = [
     component: () => import('/@pages/Test/index.vue'),
   },
   {
+    path: '/testHtml',
+    name: 'testHtml',
+    component: () => import('/@pages/TestHtml/index.vue'),
+  },
+  {
     path: '/user',
     name: 'user',
     component: () => import('/@pages/User/index.vue'),
