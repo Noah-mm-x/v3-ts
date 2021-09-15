@@ -1,12 +1,30 @@
 <template>
   <div>
+    <van-tabs
+      v-model:active="active"
+      :swipeable="true"
+      :ellipsis="false"
+    >
+      <van-tab
+        v-for="index in 4"
+        :key="index"
+        :title="'标签标签标签标签标签标' + index"
+      >
+        内容 {{ index }}
+      </van-tab>
+    </van-tabs>
     test
   </div>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
+import { Tab, Tabs } from "vant";
 export default defineComponent({
-  name: "",
+  name: "testt",
+  components: {
+    [Tab.name]: Tab,
+    [Tabs.name]: Tabs,
+  },
   setup: () => {
     enum Direction {
       n = 4,
@@ -70,9 +88,9 @@ export default defineComponent({
       console.log(`${per.name} say ${msg.name}`);
     };
     personSay({ name: "战神", age: 109 }, { name: "hh" });
-    
   },
 });
 </script>
 <style lang="less" scoped>
+@import "./index.less";
 </style>
