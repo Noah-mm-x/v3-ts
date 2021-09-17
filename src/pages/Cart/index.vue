@@ -1,22 +1,13 @@
 <template>
-  <div class="cart">
-    <van-icon
-      size="40"
-      name="cart-o"
-      color="#ff8000"
-      :badge="num"
-    />
+  <div id="cart">
+
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, computed, ref } from "vue";
-import { Icon } from "vant";
+import { defineComponent, computed } from "vue";
 import { useStore } from "/@store/";
 export default defineComponent({
   name: "cart",
-  components: {
-    [Icon.name]: Icon,
-  },
   setup: () => {
     const { getters } = useStore();
     let num = computed((): number => getters.shoppingCartLen);

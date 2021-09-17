@@ -14,6 +14,15 @@ export default defineComponent({
     const markdownToHtml = computed(()=>{
       return md(markdown.value)
     })
+
+    const fnc =  ()=>{
+      console.log('fnc')
+      return function () {
+        console.log('fun')
+      }
+    }
+    const a = fnc()
+    a()
     return {
       markdown,
       markdownToHtml

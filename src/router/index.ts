@@ -3,6 +3,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 // import { defineAsyncComponent } from 'vue'
 import productsRoute from './products'
 import userRoute from './user'
+import cartRoute from './cart'
 import Index from "/@pages/Index/index.vue";
 const routes: Array<RouteRecordRaw> = [
   {
@@ -11,6 +12,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Index,
   },
   ...productsRoute,
+  ...cartRoute,
   ...userRoute
 ];
 

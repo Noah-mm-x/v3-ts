@@ -21,28 +21,28 @@
       active-color="#FF8000"
     >
       <van-tabbar-item
+        v-for="(item,index) in itemList"
+        :key="index"
         replace
-        to="/"
-        icon="home-o"
-      >首页</van-tabbar-item>
-      <van-tabbar-item
-        replace
-        to="/products"
-        icon="shop"
-      >商品</van-tabbar-item>
-      <van-tabbar-item
-        replace
-        to="/user"
-        icon="contact"
-      >我的</van-tabbar-item>
+        :to="item.link"
+        :icon="item.icon"
+        :badge="item.badge"
+      >{{item.name}}</van-tabbar-item>
     </van-tabbar>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent,reactive } from "vue";
 import NavBar from "/@src/components/NavBar/index.vue";
 import { Tabbar, TabbarItem } from "vant";
+interface list {
+   link: string,
+   name: string,
+   icon: string,
+   badge?: string
+}
+
 export default defineComponent({
   name: "App",
   components: {
@@ -50,6 +50,34 @@ export default defineComponent({
     [Tabbar.name]: Tabbar,
     [TabbarItem.name]: TabbarItem,
   },
+  setup(){
+    const itemList: Array<list> = reactive([
+      {
+        link: "/",
+        name: "首页",
+        icon: "home-o"
+      },
+      {
+        link: "/products",
+        name: "商品",
+        icon: "shop"
+      },
+      {
+        link: "/cart",
+        name: "购物车",
+        icon: "bag-o",
+        badge: 0
+      },
+      {
+        link: "/user",
+        name: "我的",
+        icon: "contact"
+      }
+    ])
+    return {
+      itemList
+    }
+  }
 });
 </script>
 
