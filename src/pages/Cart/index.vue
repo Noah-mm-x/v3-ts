@@ -1,6 +1,10 @@
 <template>
   <div id="cart">
-
+    <ul class="list">
+      <li>
+        <img src="/@img/products/img1.jpg" alt="">
+      </li>
+    </ul>
   </div>
 </template>
 <script lang="ts">

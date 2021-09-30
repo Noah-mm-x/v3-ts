@@ -2,9 +2,6 @@ const productsRoute = [
   {
     path: '/products',
     name: 'products',
-    meta: {
-      keepAlive: true
-    },
     component: () => import('/@pages/Products/index.vue'),
   },
   {
